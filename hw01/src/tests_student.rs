@@ -50,3 +50,12 @@ fn test_mult() {
     let mat2 = vec![vec![1f32,2f32,2f32,2f32],vec![3f32,4f32,2f32,2f32],vec![5f32,6f32,2f32,2f32]];
     assert_eq!(problem2::mat_mult(&mat1, &mat2), vec![vec![22f32, 28f32, 12f32, 12f32], vec![49f32, 64f32, 30f32, 30f32]]);
 }
+
+// problem3 basic tests
+
+use problem3;
+
+#[test]
+fn test_primes() {
+    assert_eq!(problem3::sieve(7), vec![2,3,5]);
+}
