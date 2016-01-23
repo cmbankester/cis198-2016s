@@ -59,3 +59,21 @@ use problem3;
 fn test_primes() {
     assert_eq!(problem3::sieve(7), vec![2,3,5]);
 }
+
+use problem4::{hanoi, Peg};
+
+#[test]
+fn test_hanoi_3_discs() {
+    let a: Peg = Peg::A;
+    let b: Peg = Peg::B;
+    let c: Peg = Peg::C;
+    assert_eq!(hanoi(3, a, b, c), vec![
+        (a, c),
+        (a, b),
+        (c, b),
+        (a, c),
+        (b, a),
+        (b, c),
+        (a, c)
+    ])
+}
