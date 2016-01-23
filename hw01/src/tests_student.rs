@@ -46,7 +46,7 @@ fn test_asserts() {
 
 #[test]
 fn test_mult() {
-    let mat1 = vec![vec![2f32]];
-    let mat2 = vec![vec![3f32]];
-    assert_eq!(problem2::mat_mult(&mat1, &mat2), vec![vec![6f32]]);
+    let mat1 = vec![vec![1f32,2f32,3f32],vec![4f32,5f32,6f32]];
+    let mat2 = vec![vec![1f32,2f32,2f32,2f32],vec![3f32,4f32,2f32,2f32],vec![5f32,6f32,2f32,2f32]];
+    assert_eq!(problem2::mat_mult(&mat1, &mat2), vec![vec![22f32, 28f32, 12f32, 12f32], vec![49f32, 64f32, 30f32, 30f32]]);
 }
